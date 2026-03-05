@@ -2,8 +2,7 @@
   "mcpServers": {
     "ts-hover": {
       "command": "bun",
-      "args": ["run", "src/index.ts"],
-      "cwd": "."
+      "args": ["run", "src/index.ts"]
     }
   }
 }
