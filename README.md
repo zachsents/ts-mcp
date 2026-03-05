@@ -18,7 +18,7 @@ bun add -g @typescript/native-preview
 
 ### Cursor
 
-[![Install in Cursor](https://img.shields.io/badge/Install_in-Cursor-blue?logo=cursor&logoColor=white)](cursor://anysphere.cursor-deeplink/mcp/install?name=ts-hover&config=eyJjb21tYW5kIjoibnB4IiwiYXJncyI6WyIteSIsIkB6YWNoc2VudHMvdHMtbWNwIl19)
+[![Install MCP Server](https://cursor.com/deeplink/mcp-install-dark.svg)](https://cursor.com/en/install-mcp?name=ts-hover&config=eyJjb21tYW5kIjoibnB4IC15IEB6YWNoc2VudHMvdHMtbWNwIn0%3D)
 
 Or manually add to `.cursor/mcp.json`:
 
@@ -35,9 +35,7 @@ Or manually add to `.cursor/mcp.json`:
 
 ### VS Code
 
-[![Install in VS Code](https://img.shields.io/badge/Install_in-VS_Code-blue?logo=visualstudiocode&logoColor=white)](https://insiders.vscode.dev/redirect/mcp/install?name=ts-hover&config=%7B%22command%22%3A%22npx%22%2C%22args%22%3A%5B%22-y%22%2C%22%40zachsents%2Fts-mcp%22%5D%7D) [![Install in VS Code Insiders](https://img.shields.io/badge/Install_in-VS_Code_Insiders-teal?logo=visualstudiocode&logoColor=white)](https://insiders.vscode.dev/redirect/mcp/install?name=ts-hover&config=%7B%22command%22%3A%22npx%22%2C%22args%22%3A%5B%22-y%22%2C%22%40zachsents%2Fts-mcp%22%5D%7D&quality=insiders)
-
-Or manually add to your User Settings (JSON):
+Add to your User Settings (JSON):
 
 ```json
 {
