@@ -470,11 +470,38 @@ export class LspClient {
     this.sendNotification("initialized", {})
   }
 
+  /**
+   * Re-read all previously opened documents from disk and push changes to tsgo.
+   * This ensures that edits to imported/dependency files are picked up before
+   * we query a file that depends on them.
+   */
+  private async refreshOpenDocuments(): Promise<void> {
+    for (const [uri, state] of this.documents) {
+      const filePath = uriToPath(uri)
+      let content: string
+      try {
+        content = await readFile(filePath, "utf-8")
+      } catch {
+        continue
+      }
+      if (content !== state.content) {
+        const version = state.version + 1
+        this.sendNotification("textDocument/didChange", {
+          textDocument: { uri, version },
+          contentChanges: [{ text: content }],
+        })
+        this.documents.set(uri, { version, content })
+      }
+    }
+  }
+
   /** Open a document in the LSP if needed, or update it if contents changed */
   private async ensureDocumentOpen(
     filePath: string,
     uri: string,
   ): Promise<void> {
+    await this.refreshOpenDocuments()
+
     const content = await readFile(filePath, "utf-8")
     const existing = this.documents.get(uri)
 
