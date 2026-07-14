@@ -1,5 +1,7 @@
 # TS Hover MCP
 
+> Maintenance moved to [`zachsents/zachs-tools`](https://github.com/zachsents/zachs-tools/tree/main/packages/ts-mcp). This repository is kept for history; open new issues and changes in the monorepo.
+
 **Give AI agents TypeScript type inference — no editor required.**
 
 A standalone MCP server that provides TypeScript type information using [tsgo](https://github.com/nicolo-ribaudo/tc39-proposal-type-annotations) (the native Go-based TypeScript compiler). Works with any MCP client — Cursor, Claude Desktop, VS Code, Windsurf, or any other agent.
